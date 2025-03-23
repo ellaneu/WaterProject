@@ -16,8 +16,15 @@ public class WaterController : ControllerBase
     }
     
     [HttpGet("AllProjects")]
-    public IActionResult GetProjects(int pageHowMany = 10, int pageNum = 1)
+    public IActionResult GetProjects(int pageHowMany = 10, int pageNum = 1, [FromQuery] List<string>? projectTypes = null)
     {
+        
+        var query = _waterContext.Projects.AsQueryable();
+
+        if (projectTypes != null && projectTypes.Any())
+        {
+            query = query.Where(p => projectTypes.Contains(p.ProjectType));
+        }
         
         string favoriteProject = Request.Cookies["favoriteProject"];
         Console.WriteLine($"favoriteProject: {favoriteProject}");
@@ -31,18 +38,29 @@ public class WaterController : ControllerBase
         
         });
         
-        var something = _waterContext.Projects
+        var totalNumProjects = query.Count();
+        
+        var something = query
             .Skip((pageNum - 1) * pageHowMany)
             .Take(pageHowMany)
             .ToList();
-        
-        var totalNumProjects = _waterContext.Projects.Count();
 
         return Ok(new
         {
             Projects = something,
             TotalNumProjects = totalNumProjects
         });
+    }
+
+    [HttpGet("GetProjectTypes")]
+    public IActionResult GetProjectTypes()
+    {
+        var projectTypes = _waterContext.Projects
+            .Select(p => p.ProjectType)
+            .Distinct()
+            .ToList();
+        
+        return Ok(projectTypes);
     }
     
     [HttpGet("FunctionalProjects")]
