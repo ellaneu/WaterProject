@@ -66,3 +66,9 @@
 /Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/obj/Debug/net8.0/WaterProject2.sourcelink.json
+/Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/WaterProject.sqlite
+/Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/publish/web.config
+/Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/publish/appsettings.Development.json
+/Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/publish/appsettings.json
+/Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/publish/WaterProject2.deps.json
+/Users/ellaneumarker/RiderProjects/WaterProject/backend/WaterProject2/WaterProject2/bin/Debug/net8.0/publish/WaterProject2.runtimeconfig.json
